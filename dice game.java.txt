@@ -1,0 +1,41 @@
+
+import java.util.Scanner;
+
+public class Program
+{
+    public static void main(String[] args) {
+    
+    System.out.println("***WELCOME ON DICE MANIA***");
+    System.out.println();
+      Scanner input= new Scanner(System.in);
+  
+      try{
+      double mise= input.nextDouble();
+      int num= input.nextInt();  
+      int rand=(int)((Math.random()*10)/2)+1;
+  
+      if(mise>0&&num>0&&num<=rand){
+      System.out.println("###Dollar amount: "+mise);
+      System.out.println("####You have chosen the number: "+num);
+      System.out.println("#####The upper face of the dice is: "+rand);
+      
+      if(num==rand)
+      System.out.println("######You have won in dollar: "+ (mise*10));
+      else
+      System.out.println("######You have lost in dollar: " +mise);
+}    
+  
+      else
+      System.out.println("Opps...SOMETHING IS WRONG: You either enter a negative value or make a choice of dice different from[1-6]");
+      }
+    
+      catch(Exception e){
+          System.out.println("Opps...SOMETHING IS WRONG: Error in input(Two number entries are requested)");
+      }
+      
+      System.out.println();
+      
+      System.out.println("THANK YOU FOR TRYING THE PROGRAM");
+    
+    }
+}
